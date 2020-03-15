@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Numbers Game</string>
+    <string name="action_settings">Settings</string>
+    <string name="instructions">Press the button with the larger/greater number on it.
+        If the numbers are equal, press the equal button.</string>
+    <string name="title_activity_play">PlayActivity</string>
+    <string name="equal">Equal</string>
+</resources>

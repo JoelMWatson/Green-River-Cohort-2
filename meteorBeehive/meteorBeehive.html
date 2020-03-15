@@ -1,0 +1,81 @@
+<template name="layout">
+ <head>
+  <script type="text/javascript" src="simple-excel.js"></script>
+  <title>meteorBeehive</title>
+ </head>
+ <body>
+  {{> yield}}
+ </body>
+</template>
+
+<template name="beehive">
+ <h1>Welcome to MeteorBeehive</h1>
+ <div class="col-md-3">
+  <form>
+    <div class="form-group">
+      <!--hive name text box-->
+      <label for="hiveName">Hive Name:</label>
+      <input type="text" class="form-control" name="hiveName" data-required='true' />
+    </div>
+    <div class="form-group">
+      <!--observation date box-->
+      <label for="obsDate">Observation Date:</label>
+      <input type="date" name="obsDate" class="form-control" data-required='true' />
+    </div>
+    <div class="form-group">
+      <label for="duration">Duration:</label>
+      <input type="number" class="form-control" name="duration" data-required='true' />
+    </div>
+    <div class="form-group">
+        <label for="miteCount">Mite Count:</label>
+        <input type="number" class="form-control" name="miteCount" data-required='true' />
+    </div>
+      <!--submit button-->
+      <button type="submit" class="btn btn-primary">Submit Observation</button>
+  </form>
+ <a href="/admin">Admin Page</a>
+ </div>
+</template>
+
+<template name="admin">
+    <h1>MeteorBeehive Data</h1>
+    <div class="col-md-4">
+        <button id='fileExport' class="btn btn-primary">Download Page</button> &nbsp;
+        <a href="/"><button class="btn btn-primary">Enter New Data</button></a>
+        <div id='tbl'>
+        <table>
+            <tr>
+                <th>Hive Name</th>
+                <th>Date</th>
+                <th>Duration</th>
+                <th>Number of Mites</th>
+                <th>Recording Date</th>
+            </tr>
+            {{#each observations}}
+            <tr>
+                <td>{{ name }}</td>
+                <td>{{ observation }}</td>
+                <td>{{ duration }}</td>
+                <td>{{ count }}</td>
+                <td>{{ createdOn }}</td>
+            </tr>
+            {{/each}}
+        </table>
+        </div>
+    </div>
+</template>
+
+<template name="hive">
+    <h1>Specific Hive</h1>
+    <div class="col-md-4">
+        {{#each this}}
+        <p><strong>{{ name }}</strong>: Observed on {{ observation }} for {{ duration }} days, finding {{ count }} mites - {{ createdOn }}</p>
+        {{/each}}
+    </div>
+</template>
+
+<template name='excel'>
+    <h1>MeteorBeehive Download</h1>
+    <p>Your download should begin automatically.</p>
+    <a href='/admin'>Back to Admin Page</a>
+</template>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|bottom"
+    tools:context="joel.greenrivertech.net.quizapp.GameOver">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/scored"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/yourScore"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:text="@string/outOf"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center"/>
+
+
+</LinearLayout>

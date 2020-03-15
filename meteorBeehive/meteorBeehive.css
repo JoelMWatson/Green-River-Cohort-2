@@ -1,0 +1,24 @@
+/* CSS declarations go here */
+body {
+    background-color: #ecffb3;
+}
+
+form {
+    border: solid 5px #336600;
+    padding: 25px;
+    text-align: left;
+}
+
+td {
+    margin: 15px 15px 15px 15px;
+    border-style: solid;
+    border-width: 2px
+}
+
+table {
+    text-align: center;
+}
+
+#table {
+    margin-left: 40%;
+}

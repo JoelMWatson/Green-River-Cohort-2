@@ -1,0 +1,74 @@
+/* CSS declarations go here */
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #ffff99;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100%;
+}
+
+.framedParagraph {
+    border: solid 3px #003300;
+}
+
+.centerHead {
+    text-align: center;
+}
+
+.bodyContainer {
+    background-color: white;
+    min-height: 100%;
+}
+
+.wrapper {
+    background-color: white;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer {
+    height: 142px; /* .push must be the same height as .footer */
+    background-color: #003300;
+    text-align: center;
+}
+
+.push {
+    height: 142px; /* .push must be the same height as .footer */
+}
+
+.column-left { 
+    float: left; 
+    width: 50%;
+}
+
+.column-right { 
+    float: right; 
+    width: 50%;
+}
+
+img {
+    margin: 10px 10px 10px 10px;
+    border:solid 1px black;
+}
+
+.center {
+    text-align: center;
+}
+
+.pane {
+    position: fixed;
+    top: 7%; left: 0; bottom: 0; right: 0;
+    margin: 0 auto -142px;
+    width: 45%;
+    height: 75%;
+    
+    background: #f0f0fd;
+    background: rgba(240,240,253,0.90);
+    padding: 22px 32px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}

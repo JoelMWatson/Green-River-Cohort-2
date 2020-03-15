@@ -1,0 +1,30 @@
+body {
+    background-color: #ecffb3;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 25%;
+    border: solid 5px #336600;
+    padding: 25px;
+    margin-left: 37%;
+    text-align: left;
+}
+
+td {
+    margin: 15px 15px 15px 15px;
+    border-style: solid;
+    border-width: 2px
+}
+
+table {
+    text-align: center;
+}
+
+#table {
+    margin-left: 40%;
+    margin-right: auto;
+}

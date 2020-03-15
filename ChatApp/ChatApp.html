@@ -1,0 +1,124 @@
+<template name="loggedInLayout">
+<head>
+  <title>ChatApp</title>
+</head>
+
+<body>
+<div class='wrapper'>    
+  <div class="bodyContainer">
+  {{> navigator}}
+  {{#if currentUser}}
+    {{> yield}}
+  {{else}}
+    <h2 class='centerHead'>Please sign in or sign up.</h2>
+  {{/if}}
+  <div class="push"></div>
+  </div>
+</div>
+<div class="footer"><img class='footImage' src='http://open-site.org/img/logos/235343.jpg'></div>
+</body>
+</template>
+
+<template name='loggedOutLayout'>
+<head>
+  <title>ChatApp</title>
+</head>
+
+<body>
+  <div class='wrapper'>    
+    <div class="bodyContainer">
+      {{> navigator}}
+  
+      {{> yield}}
+
+    <div class="push"></div>
+    </div>
+  </div>
+  <div class="footer"><img class='footImage' src='http://open-site.org/img/logos/235343.jpg'></div>
+</body>
+</template>
+
+<template name="navigator">
+    <div class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">ChatApp</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+            <li id="userProfile"><a href="">My Profile</a></li>
+			<li><a href="/">About</a></li>
+            <li><a href="/directory">Directory</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			{{> loginButtons}} <!-- here -->
+		</ul>
+	</div>
+    </div>
+</template>
+
+<template name="directory">
+ <div class="framedParagraph">
+  <div class='col-xs-12'>
+    <h2 class="centerHead">User Directory</h2>
+    <p class='center'><strong>Username</strong>||<strong>ID</strong></p>
+    {{#each userList}}
+      <p class='center'><a href="/profile/{{ _id }}">{{ username }} || {{ _id }}</a></p>
+    {{/each}}
+    </div>
+  </div>
+</template>
+
+<template name='specificProfile'>
+  <div class='pane'>
+    <h2 class="centerHead">{{ usersName.username }}'s Page</h2>
+    <form action="">
+    <div class="form-group">
+      <!--message text box-->
+      <label for="message">Message</label>
+      <textarea name="message" class="form-control" cols="30" rows="3"></textarea>
+    </div>
+      <!--submit button-->
+      <button type="submit" class="btn btn-primary">Post Message</button>
+  </form>
+    {{#each this}}
+    <p><strong>{{ name }}</strong>: {{ message }} - {{ createdOn }}</p>
+    {{/each}}
+  </div>
+</template>
+
+<template name='about'>
+    <h2 class="centerHead">About ChatApp</h2>
+    <h3 class="framedParagraph">ChatApp is a simple chat application that was created to satisfy the requirements for the final project in IT328 at GreenRiver College. This app was created by Joel Watson, to demonstrate his understanding of meteor. Please follow the instructions to log in or register a new account.</h3>
+    <div class="container">
+        <div class="column-left">
+            <img src="/loggin1.png" />
+            <img src="/loggin2.png" />
+            <img src="/loggin3.png" />
+        </div>
+        <div class="column-right">
+            <h4>Logging in:</h4>
+            <ul>
+                <li>Locate the sign in/join button at the top left corner of your screen.</li>
+                <li>Click on the button and there will be a drop down</li>
+            </ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <ul>
+                <li>If you have signed in before, just enter your username and password into the provided fields.</li>
+                <li>If you don't have an account yet, you can create one by selecting the create account button on the drop down.</li>
+            </ul>
+            <br><br><br><br><br><br><br>
+            <h4>Signing Up:</h4>
+            <ul>
+                <li>Click on the "create account" button from the drop down, and it will to a sign-up drop down</li>
+                <li>Enter the username you wish to use and enter your password twice.</li>
+                <li>Warning: there is no reset function for your passwords at this time. Please be sure to write down your password in a safe place.</li>
+            </ul>
+        </div>
+    </div>
+</template>

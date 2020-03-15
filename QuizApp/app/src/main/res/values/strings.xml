@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="action_settings">Settings</string>
+    <string name="q1">There are ten zeros in the number one million.</string>
+    <string name="q2">The square root of one hundred is five.</string>
+    <string name="q3">Water is also called H2O.</string>
+    <string name="q4">Ice is made out of glass.</string>
+    <string name="q5">The fifth planet away from the sun in the solar system is mars.</string>
+    <string name="q6">Fish sleep with their eyes closed.</string>
+    <string name="q7">If you mix all the colors of the rainbow together you get white.</string>
+    <string name="q8">Hawaii is part of the United States.</string>
+    <string name="q9">Twenty minus thirty plus ten equals zero.</string>
+    <string name="q10">If you are facing the right wall of your room and turn ninety degrees right,
+                       then one hundred eighty degrees right, and finally ninety degrees left you
+                       are facing the left wall of your room.</string>
+    <string name="True">True</string>
+    <string name="False">False</string>
+    <string name="next">Next</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect!</string>
+    <string name="scored">You Scored:</string>
+    <string name="outOf">Out of 10</string>
+</resources>
